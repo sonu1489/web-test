@@ -1,0 +1,272 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: large;
+}
+
+body {
+  color: #f4fbff;
+  background-color: aliceblue;
+  margin: 0px 20px;
+  width: 100%;
+  height: 100%;
+}
+.side-fixed {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-color: #010d3f;
+  width: 100px;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding-left: 40px;
+}
+.side-fixed-right {
+  position: absolute;
+  right: 0;
+  height: 50%;
+  margin-top: 10rem;
+  margin-left: 10px;
+  background-color: #d92f0d;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  color: #f4fbff;
+  width: 100px;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding-left: 40px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #020a2f;
+  padding: 40px 40px;
+  justify-content: space-between;
+  border-bottom: 2px solid gray;
+}
+.nav-ul ul {
+  display: flex;
+}
+ul li {
+  padding-right: 20px;
+}
+
+header {
+  background: #020a2f;
+  border: 2px solid gray;
+  width: 120px;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+}
+img {
+  height: 80px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.person {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  object-fit: cover;
+}
+.productsWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+main {
+  padding: 30px 70px;
+  background: #020a2f;
+}
+.person-detail {
+  display: flex;
+  align-items: center;
+}
+
+.load {
+  text-align: center;
+  border: 2px solid white;
+  padding: 10px 40px;
+  border-radius: 30px;
+  color: #151515;
+  background-color: rgb(241, 229, 8);
+}
+footer {
+  border-bottom: 1px solid rgb(100, 100, 102);
+  margin: 30px 10%;
+  padding: 10px 40px;
+}
+
+.footer-one {
+  display: flex;
+  color: #020a2f;
+  padding: 50px 0px;
+  justify-content: space-between;
+}
+input {
+  padding: 10px !important;
+  margin: 0%;
+}
+
+.input span {
+  background-color: rgb(237, 150, 12);
+  color: #f4fbff;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.footer-two {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  font-weight: 500;
+}
+.col-1 {
+  display: flex;
+}
+.icon {
+  color: orange;
+  padding-right: 10px;
+  font-size: xx-large;
+}
+/* sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 100px;
+  background-color: #010d3f;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #d6cfcf;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+@media screen and (max-width: 1200px) {
+  .openbtn {
+    display: block;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+/* sidebar */
+
+@media only screen and (max-width: 1200px) {
+  .nav-ul ul {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .productsWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-ul ul {
+    display: none;
+  }
+  .productsWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  footer {
+    margin: 0px;
+  }
+  .footer-one {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+  .input {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .footer-two {
+    display: block;
+  }
+  .col-1 {
+    margin: 20px;
+  }
+  .col-2 {
+    margin: 20px;
+  }
+  .col-3 {
+    margin: 20px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .productsWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .load {
+    padding: 7px 10px;
+  }
+}
